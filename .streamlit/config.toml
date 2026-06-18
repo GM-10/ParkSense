@@ -1,0 +1,7 @@
+[theme]
+base = "dark"
+primaryColor = "#00FF41" # Tactical Green
+backgroundColor = "#000000"
+secondaryBackgroundColor = "#1A1A1A"
+textColor = "#FFFFFF"
+font = "sans serif"

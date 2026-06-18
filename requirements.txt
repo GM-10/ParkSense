@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn
+hdbscan
+scipy
+folium
+streamlit
+streamlit-folium
+plotly
+langchain
+langchain-community
+langchain-openai
+chromadb
+python-dotenv
+openai
+requests

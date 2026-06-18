@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# Environments
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# Project Specific
+.superpowers/
+chroma_db/
+chroma_db_agent/
+*.csv
+# jan to may police violation_anonymized791b166.csv is >100MB, ignoring.
+jan to may police violation_anonymized791b166.csv
+data/
+!data/.gitkeep
+
+# Gemini / Superpowers
+.gemini/
+MEMORY.md
