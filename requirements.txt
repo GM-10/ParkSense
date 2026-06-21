@@ -9,8 +9,12 @@ streamlit-folium
 plotly
 langchain
 langchain-community
-langchain-openai
+langchain-groq
+langchain-huggingface
+sentence-transformers
 chromadb
 python-dotenv
-openai
 requests
+fastapi
+uvicorn
+pydantic

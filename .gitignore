@@ -27,3 +27,15 @@ data/
 # Gemini / Superpowers
 .gemini/
 MEMORY.md
+
+# Project specific caches and databases
+chroma_db_parkguard/
+db/
+logs/
+scratch/
+.tmpnpm/
+node_modules/
+dist/
+*.db
+*.log
+*.sqlite

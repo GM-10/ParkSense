@@ -1,11 +1,16 @@
 import subprocess
 import sys
 import os
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+VENV_PYTHON = ROOT / ".venv" / "Scripts" / "python.exe"
 
 def run_script(script_name):
     print(f"Running {script_name}...")
     try:
-        result = subprocess.run([sys.executable, script_name], capture_output=True, text=True, check=True)
+        python_exe = str(VENV_PYTHON if VENV_PYTHON.exists() else Path(sys.executable))
+        result = subprocess.run([python_exe, script_name], capture_output=True, text=True, check=True, cwd=str(ROOT))
         print(result.stdout)
         return True
     except subprocess.CalledProcessError as e:

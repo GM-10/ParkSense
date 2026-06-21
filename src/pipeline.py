@@ -84,6 +84,7 @@ def aggregate_data(df):
         np.log1p(station_summary['total_violations']) * 10
     ).clip(0, 100).round(2)
 
+    os.makedirs('data', exist_ok=True)
     station_summary.to_csv('data/police_station_summary.csv', index=False)
 
     # Location cluster
@@ -91,7 +92,12 @@ def aggregate_data(df):
     location_cluster.to_csv('data/location_cluster_input.csv', index=False)
 
 if __name__ == "__main__":
-    df = load_data('jan to may police violation_anonymized791b166.csv')
+    DATA_FILE = 'jan to may police violation_anonymized791b166.csv'
+    if not os.path.exists(DATA_FILE):
+        print(f"Error: Raw data file {DATA_FILE} not found in current directory.")
+        sys.exit(1)
+    
+    df = load_data(DATA_FILE)
     df = process_data(df)
     aggregate_data(df)
     print("Pipeline completed successfully.")
